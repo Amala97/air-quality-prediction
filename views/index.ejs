@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" src="server.js"></script>
+    <meta charset="utf-8">
+    <title>Test</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div class="container">
+      <fieldset>
+        <form action="/myco" method="GET">
+    <input type="float" name="co" placeholder="Enter co conc "required />
+    <input type="submit" value="Submit" />
+       </form>
+       <% if(ob.length!=0){ %>
+       <p>CO Concentration = <%= ob.coCon %><br>CO  AQI = <%= ob.coaqi %></p>
+       <% } %>
+        <form action="/myo3" method="GET">
+    <input type="float" name="o3" placeholder="Enter O3 conc "required />
+    <input type="submit" value="Submit" />
+       </form>
+       <% if(ob.length!=0){ %>
+       <p>O3 Concentration = <%= ob.o3Con %><br>O3 AQI = <%= ob.o3aqi %></p>
+       <% } %>
+       
+        <form action="/myno2" method="GET">
+    <input type="float" name="no2" placeholder="Enter NO2 conc "required />
+    <input type="submit" value="Submit" />
+       </form>
+       <% if(ob.length!=0){ %>
+       <p>NO2 Concentration = <%= ob.no2Con %><br>NO2 AQI = <%= ob.no2aqi %></p>
+       <% } %>
+       
+        <form action="/myc6h6" method="GET">
+    <input type="float" name="c6h6" placeholder="Enter C6H6 conc "required />
+    <input type="submit" value="Submit" />
+       </form>
+       <% if(ob.length!=0){ %>
+       <p>C6H6 Concentration = <%= ob.c6h6Con %><br>C6H6 AQI = <%= ob.c6h6aqi %></p>
+       <% } %>
+     </fieldset>
+     <br>
+     <br>
+
+     <% if(ob.length!=0){ %>
+     <h2>Total AQI = <%= (ob.coaqi+ob.o3aqi+ob.no2aqi+ob.c6h6aqi)/4 %></h2>
+     <% } %>
+        <!--form action="/" method="post">
+          <input name="city" type="text" class="ghost-input" placeholder="Enter a City" required>
+          <input type="submit" class="ghost-button" value="Get Weather">
+        </form>
+      </fieldset>
+      <fieldset>
+        <form action="/name" method="GET">
+          <div-->
+      <button onclick="myFunction()">Total AQI</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML ='ob.coCon';
+}
+</script>
+    </div>
+  </body>
+</html>
