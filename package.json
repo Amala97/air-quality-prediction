@@ -1,0 +1,23 @@
+{
+  "name": "airquality",
+  "version": "1.0.0",
+  "description": "forecast air quality",
+  "main": "app.js",
+  "scripts": {
+    "test": "'hello world'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "airquality"
+  },
+  "keywords": [
+    "'Python'"
+  ],
+  "author": "me",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4"
+  }
+}
