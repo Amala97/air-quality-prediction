@@ -43,10 +43,21 @@
      </fieldset>
      <br>
      <br>
-
+     
      <% if(ob.length!=0){ %>
      <h2>Total AQI = <%= (ob.coaqi+ob.o3aqi+ob.no2aqi+ob.c6h6aqi)/4 %></h2>
      <% } %>
+     <br>
+    <!--input type="submit" value="primary Pollutant" /-->
+       <form action="/primary" method="GET">
+    <input type="submit" value="Find Primary Pollutant" />
+       </form>
+
+       <% if(ob.length!=0){ %>
+       <h3>Primary Pollutant is <%= ob.pollutant %></h3>
+       <% } %> 
+    
+
         <!--form action="/" method="post">
           <input name="city" type="text" class="ghost-input" placeholder="Enter a City" required>
           <input type="submit" class="ghost-button" value="Get Weather">
@@ -55,15 +66,6 @@
       <fieldset>
         <form action="/name" method="GET">
           <div-->
-      <button onclick="myFunction()">Total AQI</button>
-
-<p id="demo"></p>
-
-<script>
-function myFunction() {
-  document.getElementById("demo").innerHTML ='ob.coCon';
-}
-</script>
     </div>
   </body>
 </html>
