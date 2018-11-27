@@ -56,6 +56,20 @@ app.get('/myc6h6', function(req, res){
     //res.send('C6H6 AQI = '+ c6h6aqi);
 })
 
+app.get('/primary', function(req, res){ 
+    var pollutant = "";
+    var max;
+    //co is the name of your input box
+    ob.max=Math.max(ob.coaqi,ob.o3aqi,ob.no2aqi,ob.c6h6aqi);
+    if (ob.max == ob.coaqi) {ob.pollutant="CO"}
+    else if(ob.max == ob.o3aqi) {ob.pollutant="O3"}
+    else if (ob.max == ob.no2aqi) {ob.pollutant="NO2"}
+    else {ob.pollutant="C6H6"}
+    res.render('index',{ob})
+    //res.send('C6H6 AQI = '+ c6h6aqi);
+})
+
+
 app.listen(3000,function(){
 	console.log('Example app listening to port 3000')
 })
