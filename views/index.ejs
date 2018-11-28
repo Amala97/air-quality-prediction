@@ -4,11 +4,56 @@
     <script type="text/javascript" src="server.js"></script>
     <meta charset="utf-8">
     <title>Test</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>air quality prediction &mdash; 100% Free Fully Responsive HTML5 Template by   FREEHTML5.co</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
+    <meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
+    <meta name="author" content="FREEHTML5.CO" />
+
     <link rel="stylesheet" type="text/css" href="/css/style.css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+    <!--link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'-->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+    <!-- Animate.css -->
+  <link rel="stylesheet" href="../css/animate.css">
+  <!-- Icomoon Icon Fonts-->
+  <link rel="stylesheet" href="../css/icomoon.css">
+  <!-- Bootstrap  -->
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <!-- Superfish -->
+  <link rel="stylesheet" href="../css/superfish.css">
+  <!-- Magnific Popup -->
+  <link rel="stylesheet" href="../css/magnific-popup.css">
+  <!-- Date Picker -->
+  <link rel="stylesheet" href="../css/bootstrap-datepicker.min.css">
+  <!-- CS Select -->
+  <link rel="stylesheet" href="../css/cs-select.css">
+  <link rel="stylesheet" href="../css/cs-skin-border.css">
+  
+  <link rel="stylesheet" href="../css/style.css">
+  <!--img src="../public/images/b.jpeg" /-->
   </head>
   <body>
-    <div class="container">
+    <div id="fh5co-wrapper">
+    <div id="fh5co-page">
+
+    <header id="fh5co-header-section" class="sticky-banner">
+      <div class="container">
+        <div class="nav-header">
+          <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle dark"><i></i></a>
+          <h1 id="fh5co-logo"><a href="index.html"></a>AIR QUALITY PREDICTION</h1>
+          >
+          <nav id="fh5co-menu-wrap" role="navigation">
+            <ul class="sf-menu" id="fh5co-primary-menu">
+              
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <div class="tab-content">
       <fieldset>
         <form action="/myco" method="GET">
     <input type="float" name="co" placeholder="Enter co conc "required />
@@ -55,7 +100,121 @@
 
        <% if(ob.length!=0){ %>
        <h3>Primary Pollutant is <%= ob.pollutant %></h3>
-       <% } %> 
+       <% } %>
+
+
+       <% if (ob.pollutant=="CO") { %>
+       <p><h4>Exposure and Risk</h4>
+Carbon monoxide, or CO, is a toxic gas that you cannot see or smell. CO is given off whenever fuel or other carbon-based materials are burned. CO usually comes from sources in or near your home that are not properly maintained or vented.
+
+<h4>You may be exposed to unsafe levels of CO by:</h4>
+
+using poorly maintained or unvented heating equipment;
+improperly vented natural gas appliances like stoves or water heaters;
+running vehicles in garages or other enclosed spaces;
+using a gas stove, grill, or oven to heat the home;
+house or building fires;
+clogged chimneys or blocked heating exhaust vents;
+running generators or gas-powered tools indoors or outside near windows, doors, or vents;
+cooking with a charcoal or gas grill inside the home or other enclosure;
+using a propane camp stove, heater, or light inside a tent; and
+being near boat engine exhaust outlets.
+Learn how CO poisoning affects the body.
+
+<h4>Risk</h4>
+All people are at risk for CO poisoning. Unborn babies, infants, the elderly, and people with chronic heart disease, anemia, or respiratory problems are generally more at risk than others.
+
+<h4>Symptoms and Health Effects</h4>
+Breathing CO can cause headache, dizziness, vomiting, and nausea. If CO levels are high enough, you may become unconscious or die. Exposure to moderate and high levels of CO over long periods of time has also been linked with increased risk of heart disease. People who survive severe CO poisoning may suffer long-term health problems.
+<br>
+Scientists are not sure what the health effects are when a person is exposed to low levels of CO over a long period of time. Better tracking of CO poisoning and exposure can help us learn about the effects of long-term exposures to low levels of CO.</p>
+      <% }
+       %>
+
+       <% if(ob.pollutant=="NO2") { %>
+       <p><h4>What is nitrogen dioxide?</h4>
+Nitrogen dioxide is a nasty-smelling gas. Some nitrogen dioxide is formed naturally in the atmosphere by lightning and some is produced by plants, soil and water. However, only about 1% of the total amount of nitrogen dioxide found in our cities' air is formed this way.
+<br>
+Nitrogen dioxide is an important air pollutant because it contributes to the formation of photochemical smog, which can have significant impacts on human health.
+<br>
+The major source of nitrogen dioxide in Australia is the burning of fossil fuels: coal, oil and gas. Most of the nitrogen dioxide in cities comes from motor vehicle exhaust (about 80%). Other sources of nitrogen dioxide are petrol and metal refining, electricity generation from coal-fired power stations, other manufacturing industries and food processing.
+<br>
+Unflued gas heaters and cookers are the major sources of nitrogen dioxide in Australian homes.
+
+<h4>How does nitrogen dioxide affect human health?</h4>
+The main effect of breathing in raised levels of nitrogen dioxide is the increased likelihood of respiratory problems. Nitrogen dioxide inflames the lining of the lungs, and it can reduce immunity to lung infections. This can cause problems such as wheezing, coughing, colds, flu and bronchitis.
+
+Increased levels of nitrogen dioxide can have significant impacts on people with asthma because it can cause more frequent and more intense attacks. Children with asthma and older people with heart disease are most at risk.
+
+How much of a problem is nitrogen dioxide in Australia?
+Since the early 1990s, even the highest levels of nitrogen dioxide reached in most Australian towns and cities are thought to be acceptable for humans.
+
+In some of Australia's larger cities, it is possible that the concentration of nitrogen dioxide sometimes increases for a short time to levels that have an adverse health effect on people who are most at risk. Air pollution authorities are monitoring the situation to see if this is the case.
+
+<h4>What's being done to manage nitrogen dioxide?</h4>
+Because high concentrations of nitrogen dioxide can have adverse effects on human health, the Australian Government has taken steps to manage and reduce the amount of nitrogen dioxide produced. These include:
+<br>
+implementing national fuel quality standards;
+supporting the implementation of tighter vehicle emission standards;
+developing a National Environment Protection Measure for diesel, to improve the in-service performance of diesel vehicles;
+developing and promoting alternative fuels;
+developing pollution forecasting systems for Australia's major cities;
+promoting bicycle use for short journeys through CycleConnect; and
+working with the States and Territories through programs such as TravelSmart to influence passengers transport choices.
+</p>
+        <% } 
+        %>
+  <% if (ob.pollutant=="O3") { %>
+       <p>Ozone can be “good” or “bad” for health and the environment depending on where it’s found in the atmosphere. Stratospheric ozone is “good” because it protects living things from ultraviolet radiation from the sun. Ground-level ozone, the topic of this website, is “bad” because it can trigger a variety of health problems, particularly for children, the elderly, and people of all ages who have lung diseases such as asthma.
+       Ozone in the air we breathe can harm our health, especially on hot sunny days when ozone can reach unhealthy levels. Even relatively low levels of ozone can cause health effects.
+     <h4>Who is at risk?</h4>
+People most at risk from breathing air containing ozone include people with asthma, children, older adults, and people who are active outdoors, especially outdoor workers. In addition, people with certain genetic characteristics, and people with reduced intake of certain nutrients, such as vitamins C and E, are at greater risk from ozone exposure. 
+<br>
+Children are at greatest risk from exposure to ozone because their lungs are still developing and they are more likely to be active outdoors when ozone levels are high, which increases their exposure.  Children are also more likely than adults to have asthma.
+<br>
+<h4>What health problems can ozone cause?</h4>
+diagram of constricted alveoli
+Ozone can cause the muscles in the airways to constrict, trapping air in the alveoli. This leads to wheezing and shortness of breath.
+<br>
+Ozone can cause the muscles in the airways to constrict, trapping air in the alveoli. This leads to wheezing and shortness of breath.
+<br>
+<h4>Ozone can:</h4>
+Make it more difficult to breathe deeply and vigorously.
+Cause shortness of breath, and pain when taking a deep breath.
+Cause coughing and sore or scratchy throat.
+Inflame and damage the airways.
+Aggravate lung diseases such as asthma, emphysema, and chronic bronchitis.
+Increase the frequency of asthma attacks.
+Make the lungs more susceptible to infection.
+Continue to damage the lungs even when the symptoms have disappeared.
+Cause chronic obstructive pulmonary disease (COPD).
+These effects have been found even in healthy people, but can be more serious in people with lung diseases such as asthma. They may lead to increased school absences, medication use, visits to doctors and emergency rooms, and hospital admissions. 
+<br>
+Long-term exposure to ozone is linked to aggravation of asthma, and is likely to be one of many causes of asthma development. Long-term exposures to higher concentrations of ozone may also be linked to permanent lung damage, such as abnormal lung development in children.
+<br>
+Recent studies consistently report associations between short-term ozone exposures and total non-accidental mortality, which includes deaths from respiratory causes. Studies suggest that long-term exposure to ozone also may increase the risk of death from respiratory causes, but the evidence is not as strong as the evidence for short-term exposure.
+
+<h4>How can I reduce these health risks?</h4>
+
+The AirNow Web site provides daily air quality reports for many areas. These reports use the Air Quality Index (or AQI) to tell you how clean or polluted the air is.
+<br>
+EnviroFlash, a free service, can alert you via email when your local air quality is a concern. Sign up at www.enviroflash.info.
+<br>
+<h4>Pamphlets and other resources:</h4>
+Printable pamphlets and booklets about ozone effects on air quality and health.
+EPA’s Air Quality Guide for Ozone Provides detailed information about what the Air Quality Index means.  Helps determine ways to protect your family's health when ozone levels reach the unhealthy range, and ways you can help reduce ozone air pollution.
+Ozone and Your Patients' Health: Training for Health Care Providers Designed for family practice doctors, pediatricians, nurse practitioners, asthma educators, and other medical professionals who counsel patients about asthma and respiratory symptoms.
+AirNow Health Providers Information Provides information on how to help patients protect their health by reducing their exposure to air pollution.
+EPA’s Asthma Web Site EPA's Communities in Action Asthma Initiative includes programs to address indoor and outdoor environments that cause, trigger or exacerbate asthma symptoms.</p>
+       <% }
+       %>
+ <% if(ob.pollutant=="C6H6"){ %>A compound very slightly soluble in water and volatile. 
+90% of the benzene in the ambient air comes from road traffic. 
+The remaining 10% comes from the evaporation of the fuel storage and distribution.
+
+<h4>Health effects</h4> 
+Carcinogenic, a Class A1 toxicity, known as carcinogenic to humans. Harmful effects on the central nervous system.Reference method for measurement of benzene is that stipulated in SR EN 14662 Ambient air quality. Standardized method for measuring the concentration of benzene Parts 1, 2 and 3. <%} %>
+
     
 
         <!--form action="/" method="post">
@@ -66,6 +225,7 @@
       <fieldset>
         <form action="/name" method="GET">
           <div-->
+      
     </div>
   </body>
 </html>
