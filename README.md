@@ -1,2 +1,2 @@
-# oh-my-god
+# air quality prediction
 design project
